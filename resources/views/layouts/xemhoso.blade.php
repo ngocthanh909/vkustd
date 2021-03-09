@@ -54,25 +54,19 @@
                             <div class="col-lg-6 detail-block">
                                 <div class="detail-title ">HỌ VÀ TÊN</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp"  disabled  value="{{$sinhvien->hodem.' '.$sinhvien->ten}}">
-                                        <input type="text" name="avatar" id="avatar" hidden>
+                                    {{$sinhvien->hodem.' '.$sinhvien->ten}}
                                 </div>
                             </div>
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">GIỚI TÍNH</div>
                                 <div class="detail-content">
-                                    <select id="gioitinh" name="gioitinh" class="custom-select" disabled>
-                                        <option value="1">Nam</option>
-                                        <option value="0">Nữ</option>
-                                    </select>
+                                    {{$sinhvien->gioitinh}}
                                 </div>
                             </div>
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">NGÀY SINH</div>
                                 <div class="detail-content">
-                                    <input type="date" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
+                                    {{$sinhvien->ngaysinh}}
                                 </div>
                             </div>
                         </div>

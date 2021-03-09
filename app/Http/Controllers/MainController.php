@@ -67,8 +67,10 @@ class MainController extends Controller
         return $result;
     }
     public function suahosoIndex(){
-        $student = DB::table('table_sinhvien')->where('masv', '19IT195')->first();
-        // dd($student);
-        return view('layouts.suahoso')->with('student', $student);
+        $sinhvien = DB::table('table_sinhvien')->where('masv', '19IT195')->first();
+        $sinhhvienTamtru = DB::table('table_sinhvien_tamtru')->where('id', $sinhvien->tamtru_id)->first();
+        // dd($sinhhvienTamtru);
+        
+        return view('layouts.suahoso')->with('sinhvien', $sinhvien)->with('sinhvienTamtru', $sinhhvienTamtru);
     }
 }
