@@ -54,8 +54,8 @@
                             <div class="col-lg-6 detail-block">
                                 <div class="detail-title ">HỌ VÀ TÊN</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp"  disabled  value="{{$sinhvien->hodem.' '.$sinhvien->ten}}">
+                                    <input type="text" class="form-control" 
+                                         disabled  value="{{$sinhvien->hodem.' '.$sinhvien->ten}}">
                                         <input type="text" name="avatar" id="avatar" hidden>
                                 </div>
                             </div>
@@ -71,8 +71,8 @@
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">NGÀY SINH</div>
                                 <div class="detail-content">
-                                    <input type="date" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
+                                    <input type="date" class="form-control" 
+                                        value="{{$sinhvien->ngaysinh}}" disabled>
                                 </div>
                             </div>
                         </div>
@@ -81,22 +81,22 @@
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title ">DÂN TỘC</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control"
+                                    value="{{$sinhvien->dantoc}}" disabled>
                                 </div>
                             </div>
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title ">TÔN GIÁO</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->tongiao}}" disabled>
                                 </div>
                             </div>
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title ">NƠI SINH</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->noisinh}}" disabled>
                                 </div>
                             </div>
                         </div>
@@ -105,22 +105,22 @@
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title ">SỐ CMND</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->cmnd}}"  disabled>
                                 </div>
                             </div>
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title ">NGÀY CẤP</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->ngaycap}}" disabled>
                                 </div>
                             </div>
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title ">NƠI CẤP</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->noicap}}" disabled>
                                 </div>
                             </div>
                         </div>
@@ -129,15 +129,15 @@
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title ">ĐOÀN THỂ</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->ngaysinh}}" disabled>
                                 </div>
                             </div>
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title ">MÃ BHYT</div>
                                 <div class="detail-content">
                                     <input type="text" name="ma_bhyt" class="form-control" id="Mã BHYT"
-                                        aria-describedby="emailHelp" placeholder="Mã BHYT" value="{{$sinhvien->ma_bhyt}}">
+                                        placeholder="Mã BHYT" value="{{$sinhvien->ma_bhyt}}">
                                 </div>
                             </div>
                         </div>
@@ -151,15 +151,15 @@
                             <div class="col-lg-7 detail-block">
                                 <div class="detail-title ">HỌ TÊN BỐ</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->hotencha}}" disabled>
                                 </div>
                             </div>
                             <div class="col-lg-5 detail-block">
                                 <div class="detail-title ">NĂM SINH</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->namsinhcha}}" disabled>
                                 </div>
                             </div>
                         </div>
@@ -168,15 +168,15 @@
                             <div class="col-lg-7 detail-block">
                                 <div class="detail-title ">HỌ TÊN MẸ</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->hotenme}}" disabled>
                                 </div>
                             </div>
                             <div class="col-lg-5 detail-block">
                                 <div class="detail-title ">NĂM SINH</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->namsinhme}}" disabled>
                                 </div>
                             </div>
                         </div>
@@ -184,38 +184,38 @@
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">HỘ KHẨU (TỈNH)</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->tinh_thanh}}" disabled>
                                 </div>
                             </div>
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">HỘ KHẨU (HUYỆN)</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->quan_huyen}}" disabled>
                                 </div>
                             </div>
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">HỘ KHẨU (XÃ)</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->xa_phuong}}" disabled>
                                 </div>
                             </div>
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">HỘ KHẨU (ĐƯỜNG, SỐ NHÀ)</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->thon_to}}" disabled>
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-2">
                             <div class="col-lg-12 detail-block">
-                                <div class="detail-title ">ĐỊA CHỈ HIỆN TẠI</div>
+                                <div class="detail-title ">Địa chỉ liên lạc</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" >
+                                    <input type="text" class="form-control" 
+                                    value="{{$sinhvien->dia_chi_lien_lac}}"  disabled>
                                 </div>
                             </div>
                         </div>
@@ -229,29 +229,29 @@
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">SỐ ĐIỆN THOẠI</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="dienthoai"
-                                        aria-describedby="emailHelp" placeholder="Số điện thoại" value="{{$sinhvien->dienthoai}}">
+                                    <input type="text" class="form-control"  name="dienthoai"
+                                        placeholder="Số điện thoại" value="{{$sinhvien->dienthoai}}">
                                 </div>
                             </div>
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">SỐ ĐIỆN THOẠI GIA ĐÌNH</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1"  name="dienthoaigiadinh"
-                                        aria-describedby="emailHelp" placeholder="Số điện thoại gia đình" value="{{$sinhvien->dienthoaigiadinh}}">
+                                    <input type="text" class="form-control"   name="dienthoaigiadinh"
+                                        placeholder="Số điện thoại gia đình" value="{{$sinhvien->dienthoaigiadinh}}">
                                 </div>
                             </div>
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">EMAIL</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="email"
-                                        aria-describedby="emailHelp"  value="{{$sinhvien->email}}">
+                                    <input type="text" class="form-control"  name="email_khac"
+                                         value="{{$sinhvien->email_khac}}">
                                 </div>
                             </div>
                             <div class="col-lg-3 detail-block">
                                 <div class="detail-title ">FACEBOOK</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="facebook"
-                                        aria-describedby="emailHelp"  value="{{$sinhvien->facebook}}">
+                                    <input type="text" class="form-control"  name="facebook"
+                                         value="{{$sinhvien->facebook}}">
                                 </div>
                             </div>
                         </div>
@@ -259,15 +259,15 @@
                             <div class="col-lg-8 detail-block">
                                 <div class="detail-title ">ĐỊA CHỈ TẠM TRÚ</div>
                                 <div class="detail-content">
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="diachitamtru"
-                                        aria-describedby="emailHelp" value="{{$sinhvienTamtru->diachi}}">
+                                    <input type="text" class="form-control"  name="diachitamtru"
+                                        value="{{$sinhvienTamtru->diachi}}">
                                 </div>
                             </div>
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title">THỜI GIAN</div>
                                 <div class="detail-content">
-                                    <input type="date" class="form-control" id="exampleInputEmail1" name="thoigiantamtru"
-                                        aria-describedby="emailHelp" >
+                                    <input type="date" class="form-control"  name="thoigiantamtru" value={{$sinhvienTamtru->thoigian}}
+                                    >
                                 </div>
                             </div>
                         </div>

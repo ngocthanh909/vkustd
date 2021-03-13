@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController as ctr;
+use App\Http\Controllers\HosoController as ctr;
+use App\Http\Controllers\CvController as cvCtr;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,8 @@ Route::post('/upload', [ctr::class, 'imgUpload'])->name('upload');
 
 // View route
 Route::get('suahoso/', [ctr::class, 'suahosoIndex']);
+Route::get('hoso/', [ctr::class, 'hosoIndex']);
+Route::get('cv/', [cvCtr::class, 'cvIndex']);
+Route::get('suacv/', [cvCtr::class, 'suacvIndex']);
 // Resource route
 Route::post('suahoso/', [ctr::class, 'suahosoStore'])->name('suahosoStore');

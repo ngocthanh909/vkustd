@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 
-class MainController extends Controller
+class HosoController extends Controller
 {   
     public function suahosoStore(Request $request){
         $values2 = ['diachi' => $request->diachitamtru, 
@@ -67,10 +67,19 @@ class MainController extends Controller
         return $result;
     }
     public function suahosoIndex(){
-        $sinhvien = DB::table('table_sinhvien')->where('masv', '19IT195')->first();
+        $sinhvien = DB::table('table_sinhvien')->where('table_sinhvien.masv', '19IT195')->join('table_sinhvien_chitiet', 'table_sinhvien.masv', '=', 'table_sinhvien_chitiet.masv')->first();
         $sinhhvienTamtru = DB::table('table_sinhvien_tamtru')->where('id', $sinhvien->tamtru_id)->first();
+        // dd($sinhvien);
         // dd($sinhhvienTamtru);
         
         return view('layouts.suahoso')->with('sinhvien', $sinhvien)->with('sinhvienTamtru', $sinhhvienTamtru);
+    }
+    public function hosoIndex(){
+        $sinhvien = DB::table('table_sinhvien')->where('table_sinhvien.masv', '19IT195')->join('table_sinhvien_chitiet', 'table_sinhvien.masv', '=', 'table_sinhvien_chitiet.masv')->first();
+        $sinhhvienTamtru = DB::table('table_sinhvien_tamtru')->where('id', $sinhvien->tamtru_id)->first();
+        // dd($sinhvien);
+        // dd($sinhhvienTamtru);
+        
+        return view('layouts.xemhoso')->with('sinhvien', $sinhvien)->with('sinhvienTamtru', $sinhhvienTamtru);
     }
 }
