@@ -260,13 +260,20 @@
                                 <div class="detail-title ">ĐỊA CHỈ TẠM TRÚ</div>
                                 <div class="detail-content">
                                     <input type="text" class="form-control"  name="diachitamtru"
-                                        value="{{$sinhvienTamtru->diachi}}">
+                                    value="
+                                    @isset($sinhvienTamtru)
+                                        {{$sinhvienTamtru->diachi}}
+                                    @endisset">
                                 </div>
                             </div>
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title">THỜI GIAN</div>
                                 <div class="detail-content">
-                                    <input type="date" class="form-control"  name="thoigiantamtru" value={{$sinhvienTamtru->thoigian}}
+                                    <input type="date" class="form-control"  name="thoigiantamtru"
+                                    value="
+                                    @isset($sinhvienTamtru)
+                                        {{$sinhvienTamtru->thoigian}}
+                                    @endisset"
                                     >
                                 </div>
                             </div>

@@ -231,13 +231,17 @@
                             <div class="col-lg-8 detail-block">
                                 <div class="detail-title ">ĐỊA CHỈ TẠM TRÚ</div>
                                 <div class="detail-content">
-                                    {{$sinhvienTamtru->diachi}}
+                                    @isset($sinhvienTamtru)
+                                        {{$sinhvienTamtru->diachi}}
+                                    @endisset
                                 </div>
                             </div>
                             <div class="col-lg-4 detail-block">
                                 <div class="detail-title">THỜI GIAN</div>
                                 <div class="detail-content">
-                                    {{$sinhvienTamtru->thoigian}}
+                                    @isset($sinhvienTamtru)
+                                        {{$sinhvienTamtru->thoigian}}
+                                    @endisset
                                 </div>
                             </div>
                         </div>

@@ -13,23 +13,33 @@ class HosoController extends Controller
                 'masv' => '19IT195'];
         $result2 = DB::table('table_sinhvien_tamtru')->where('masv', '19IT195')->insertGetId($values2);
 
-        $values1 = ['dienthoaigiadinh' => $request->dienthoaigiadinh, 
-                'avatar' => $request->avatar,
-                'ma_bhyt'=> $request->ma_bhyt, 
+            $values1 = [
                 'dienthoai' => $request->dienthoai, 
                 'dienthoaigiadinh' => $request->dienthoaigiadinh, 
+            ];
+            $values3 = [
+                'avatar' => $request->avatar,
+                'ma_bhyt'=> $request->ma_bhyt,
                 'facebook' => $request->facebook,
-                'tamtru_id' => $result2];
+                'tamtru_id' => $result2
+            ];
+            
         foreach($values1 as $key => $value){
             if(is_null($value)){
                 unset($values1[$key]);
             }
         }
+        foreach($values3 as $key => $value){
+            if(is_null($value)){
+                unset($values3[$key]);
+            }
+        }
         $result1 = DB::table('table_sinhvien')->where('masv', '19IT195')->update($values1);
+        $result3 = DB::table('table_sinhvien_chitiet')->where('masv', '19IT195')->update($values3);
 
-        // dd($values1);
+        echo  "1: " .$result3 . "2: ". $result3; 
 
-        if($result1){
+        if($result1 + $result3 = 2){
             return "Thành công!";
         } else {
             return "Thất bại!";
