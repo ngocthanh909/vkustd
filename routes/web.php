@@ -24,6 +24,7 @@ Route::post('/upload', [ctr::class, 'imgUpload'])->name('upload');
 Route::get('suahoso/', [ctr::class, 'suahosoIndex']);
 Route::get('hoso/', [ctr::class, 'hosoIndex']);
 Route::get('cv/', [cvCtr::class, 'cvIndex']);
+Route::get('cv2/', [cvCtr::class, 'cvIndexV2']);
 Route::get('suacv/', [cvCtr::class, 'suacvIndex']);
 // Resource route
 Route::post('suahoso/', [ctr::class, 'suahosoStore'])->name('suahosoStore');

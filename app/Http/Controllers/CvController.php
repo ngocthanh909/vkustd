@@ -15,6 +15,9 @@ class CvController extends Controller
         // dd($sinhvienCv);
         return view('cv')->with('sinhvienCv', $sinhvienCv);
     }
+    function cvIndexV2(){
+        return view('cvIndexV2');
+    }
     public function suacvIndex(){
        
 
