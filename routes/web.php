@@ -30,11 +30,12 @@ Route::get('suacv/', [cvCtr::class, 'suacvIndex']);
 Route::post('suahoso/', [ctr::class, 'suahosoStore'])->name('suahosoStore');
 // VIEW ROUTE
 Route::view('/', 'index/index');
+
 Route::get('/taodon', [dtCtr::class, 'themDonIndex']);
 Route::get('/ajax/ajaxtruong', [dtCtr::class, 'ajaxTruong'])->name('ajaxTruong');
-
-
 Route::post('/admin/maudon/store', [dtCtr::class, 'maudonStore'])->name('maudon.Store');
 Route::post('/admin/maudon/truong/store', [dtCtr::class, 'truongStore'])->name('truong.Store');
-Route::get('/sv/nopdon/{donid}', [dtCtr::class, 'nopdonIndex']);
+
+Route::get('/sv/nopdon/{donid}', [dtCtr::class, 'nopdonIndex'])->name('showdon');
 Route::post('/sv/nopdon/{donid}', [dtCtr::class, 'nopdonStore'])->name('nopdon.Store');
+Route::get('/sv/{masv}/thongtin', [dtCtr::class, 'thongtinsv']);

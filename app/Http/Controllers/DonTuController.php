@@ -7,6 +7,7 @@ use DB;
 
 class DonTuController extends Controller
 {
+
     function themDonIndex(){
         $filedList = DB::table('table_maudon_chitiet')->get();
         return view('DonTu/taodon')->with(['listTruong' => $filedList]);
@@ -56,13 +57,20 @@ class DonTuController extends Controller
         ]);
     }
     function nopdonStore(Request $request, $maudon_id){
+
+
         $thongtindon = [
             'masv' => '19IT195',
             'maudon_id' => $maudon_id,
             'thoigiantao' => date("Y/m/d"),
         ];
+
         $donid = DB::table('table_don')->insertGetId($thongtindon);
+
         $rawRecord = $request->tentruong;
+
+        
+
         foreach ($rawRecord as $key => $item){
             $record = [
                 'don_id' => $donid,
@@ -72,5 +80,9 @@ class DonTuController extends Controller
             $result = DB::table('table_don_chitiet')->insert($record);
         }
         return $result;
+    }
+    function thongtinsv(Request $request, $masv){
+        $result = DB::table('table_sinhvien')->where('masv', $masv)->first();
+        return response()->json($result);
     }
 }

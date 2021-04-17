@@ -54,7 +54,7 @@
             <div class="card-body">
               <form id="themtruongform">
                 <div class="form-group row">
-                    <label for="tenmaudon" class="col-4 col-form-label">Thêm mới trường dữ liệu</label> 
+                    <label for="tenmaudon" class="col-4 col-form-label">Tên trường</label> 
                     <div class="col-10">
                         <input id="tentruong" name="tentruong" placeholder="Tên trường muốn thêm" type="text" class="form-control" required="required">
                     </div>
@@ -62,6 +62,12 @@
                         <button type="submit" class="btn btn-block bg-gradient-primary">Thêm</button>
                       </div>
                 </div>
+                <div class="form-group row">
+                  <label for="tenmaudon" class="col-4 col-form-label">Ghi chú</label> 
+                  <div class="col-10">
+                      <input id="ghichutruong" name="ghichutruong" placeholder="Ghi chú" type="text" class="form-control">
+                  </div>
+              </div>
                 <ul id="listtruongContainer">
                     @foreach($listTruong as $item)
                         <li role="button" id="node{{$item->id}}" onClick="themTruong({{$item->id}}, '{{$item->tentruong}}')">{{$item->tentruong}}</li>
